@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="address" class="all.pojo.Address">
+        <property name="address" value="陕西西安"></property>
+    </bean>
+
+
+<bean id="student" class="all.pojo.Student">
+<!--    111： 普通值注入，value-->
+    <property name="name" value="张三"></property>
+<!--    222.bean注入 ，ref-->
+    <property name="address" ref="address"></property>
+<!--数组-->
+    <property name="books">
+        <array>
+            <value>平凡的世界</value>
+            <value>三国演义</value>
+        </array>
+    </property>
+<!-- List-->
+    <property name="hobbies">
+        <list>
+            <value>看电影</value>
+            <value>打游戏</value>
+            <value>听音乐</value>
+        </list>
+    </property>
+<!--    Map-->
+    <property name="card">
+        <map>
+            <entry key="身份证" value="121212316515326"></entry>
+            <entry key="学生证" value="54265653426325"></entry>
+        </map>
+    </property>
+<!--    Set-->
+    <property name="games">
+        <set>
+            <value>王者荣耀</value>
+            <value>qq飞车</value>
+            <value>PUBG</value>
+        </set>
+    </property>
+<!--    Properties-->
+    <property name="info">
+        <props>
+            <prop key="e-mail">8888@qq.com</prop>
+            <prop key="age">88</prop>
+        </props>
+    </property>
+<!--    null-->
+    <property name="wifi" >
+        <null/>
+    </property>
+    
+</bean>
+
+</beans>

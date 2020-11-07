@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    无参创建对象     -->
+<!--    id：bean 的唯一标识符-->
+<!--    class： 对象多对应的全限定名： 包名 + 类名-->
+<!--    name：可以取别名（可以取多个）-->
+<!--    scope:作用域-->
+    <bean id="user" class="all.pojo.User" name="user2,u3" scope="singleton">
+        <property name="name" value="SpringIOC控制反转!!!"></property>
+    </bean>
+
+</beans>
